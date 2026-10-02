@@ -63,7 +63,15 @@ fun LayoutColumnRow(modifier: Modifier){
     Column() {
         Row(modifier = modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceEvenly) {
+            Text(text = "komponen1baris1")
+            Text(text = "komponen2baris1")
+            Text(text = "komponen3baris1")
+        }
+        Row(modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly) {
+            Text(text = "komponen1baris2")
+            Text(text = "komponen2baris2")
+            Text(text = "komponen3baris2")
         }
     }
 }
-
