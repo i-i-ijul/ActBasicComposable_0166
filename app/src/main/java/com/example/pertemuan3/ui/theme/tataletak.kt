@@ -1,6 +1,9 @@
 package com.example.pertemuan3.ui.theme
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,3 +23,16 @@ fun ColumnLayout(modifier: Modifier) {
         Text(text = "komponen4")
     }
 }
+
+@Composable
+
+fun RowLayout(modifier: Modifier){
+    Row(modifier = modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceEvenly) {
+        Text(text = "komponen1")
+        Text(text = "komponen2")
+        Text(text = "komponen3")
+        Text(text = "komponen4")
+    }
+}
+
