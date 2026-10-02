@@ -1,17 +1,28 @@
 package com.example.pertemuan3.ui.theme
 
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import com.example.pertemuan3.R
 
 @Composable
 
@@ -88,6 +99,63 @@ fun LayoutRowColumn(modifier: Modifier){
             Text(text = "komponen1kolom2")
             Text(text = "komponen2kolom2")
             Text(text = "komponen3kolom2")
+        }
+    }
+}
+
+@Composable
+fun LayoutBoxColumnRow(modifier: Modifier){
+    val image = painterResource(R.drawable.ijulganteng)
+    Column {
+        Box(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(110.dp)
+                .background(color = Color.Gray),
+            contentAlignment = Alignment.Center
+        ){
+            Column() {
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "ColSatu_Row1_komponen1")
+                    Text(text = "colSatu_Row1_komponen2")
+                    Text(text = "colSatu_Row1_komponen3")
+                }
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                   Text(text = "ColSatu_Row2_komponen1")
+                   Text(text = "ColSatu_Row2_komponen2")
+                    Text(text = "ColSatu_Row2_komponen3")
+                }
+            }
+        }
+        Spacer(modifier = Modifier.height(10.dp))
+        Box(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(300.dp)
+                .background(color = Color.DarkGray),
+            contentAlignment = Alignment.Center
+        ) {
+            Image(
+                painter = image,
+                contentDescription = null,
+                contentScale = ContentScale.Fit
+            )
+            Text(
+                text = "My Favorite Music Gwah",
+                fontSize = 50.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                modifier = Modifier.align(
+                    alignment = Alignment.Center
+                )
+            )
         }
     }
 }
