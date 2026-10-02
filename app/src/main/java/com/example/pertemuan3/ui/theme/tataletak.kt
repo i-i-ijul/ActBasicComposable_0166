@@ -1,14 +1,17 @@
 package com.example.pertemuan3.ui.theme
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.Alignment
 
 @Composable
 
@@ -36,3 +39,20 @@ fun RowLayout(modifier: Modifier){
     }
 }
 
+@Composable
+
+fun BoxLayout(modifier: Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxHeight()
+            .fillMaxWidth(),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(text = "Box 1")
+        Text(text = "Column1")
+        Text(text = "Row1")
+        Text(text = "Row2")
+        Text(text = "Box2")
+        Text(text = "Column3")
+    }
+}
