@@ -56,3 +56,13 @@ fun BoxLayout(modifier: Modifier) {
         Text(text = "Column3")
     }
 }
+
+@Composable
+
+fun LayoutColumnRow(modifier: Modifier){
+    Column() {
+        Row(modifier = modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly) {
+        }
+    }
+}
