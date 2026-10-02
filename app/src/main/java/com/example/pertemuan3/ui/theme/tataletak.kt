@@ -75,3 +75,20 @@ fun LayoutColumnRow(modifier: Modifier){
         }
     }
 }
+
+@Composable
+fun LayoutRowColumn(modifier: Modifier){
+    Row(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
+        Column() {
+            Text(text = "komponen1kolom1")
+            Text(text = "komponen2kolom1")
+            Text(text = "komponen3kolom1")
+        }
+        Column() {
+            Text(text = "komponen1kolom2")
+            Text(text = "komponen2kolom2")
+            Text(text = "komponen3kolom2")
+        }
+    }
+}
+
