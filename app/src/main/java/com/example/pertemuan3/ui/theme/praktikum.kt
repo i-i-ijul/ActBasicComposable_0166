@@ -42,7 +42,18 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                     .padding(top = 40.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Text(
+                    text = "Login",
+                    fontSize = 28.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Blue
+                )
 
+                Text(
+                    text = "Ini adalah halaman login,",
+                    fontSize = 14.sp,
+                    color = Color.White
+                )
             }
         }
     }
