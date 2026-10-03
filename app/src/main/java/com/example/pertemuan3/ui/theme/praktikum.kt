@@ -36,6 +36,14 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = 40.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+
+            }
         }
     }
 }
