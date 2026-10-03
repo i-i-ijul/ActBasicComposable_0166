@@ -40,10 +40,10 @@ fun ColumnLayout(modifier: Modifier) {
 fun RowLayout(modifier: Modifier){
     Row(modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceEvenly) {
-        Text(text = "komponen1")
-        Text(text = "komponen2")
-        Text(text = "komponen3")
-        Text(text = "komponen4")
+        Text(text = "Komponen1")
+        Text(text = "Komponen2")
+        Text(text = "Komponen3")
+        Text(text = "Komponen4")
     }
 }
 
