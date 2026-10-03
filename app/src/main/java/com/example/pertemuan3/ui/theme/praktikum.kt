@@ -26,5 +26,9 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
     val background = painterResource(R.drawable.bg)
     val logo = painterResource(R.drawable.logo)
     val fotobulet = painterResource(R.drawable.ijulganteng)
-
+    Column {
+        Box(
+            modifier = Modifier.fillMaxSize()
+        )
+        }
 }
