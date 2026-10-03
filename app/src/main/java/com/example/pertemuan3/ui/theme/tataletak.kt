@@ -105,7 +105,7 @@ fun LayoutRowColumn(modifier: Modifier){
 }
 
 @Composable
-fun LayoutBoxColumnRow(modifier: Modifier){
+fun LayoutBoxColumnRow(modifier: Modifier) {
     val image = painterResource(R.drawable.bg)
     val logo = painterResource(R.drawable.logo)
     val fotobulet = painterResource(R.drawable.ijulganteng)
@@ -118,50 +118,50 @@ fun LayoutBoxColumnRow(modifier: Modifier){
                 contentDescription = "Background",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
-        )
+            )
             Column(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(top = 40.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                    Text(text = "ColSatu_Row1_komponen1")
-                    Text(text = "colSatu_Row1_komponen2")
-                    Text(text = "colSatu_Row1_komponen3")
-                }
-                Row(
-                    modifier = modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
+                Text(
+                    text = "Login",
+                    fontSize = 28.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Blue
+                )
+
+                Text(
+                    text = "Ini adalah halaman login,",
+                    fontSize = 14.sp,
+                    color = Color.White
+                )
+                Spacer(modifier = Modifier.height(10.dp))
+                Box(
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .height(300.dp)
+                        .background(color = Color.DarkGray),
+                    contentAlignment = Alignment.Center
                 ) {
-                   Text(text = "ColSatu_Row2_komponen1")
-                   Text(text = "ColSatu_Row2_komponen2")
-                    Text(text = "ColSatu_Row2_komponen3")
+                    Image(
+                        painter = image,
+                        contentDescription = null,
+                        contentScale = ContentScale.Fit
+                    )
+                    Text(
+                        text = "My Favorite Music Gwah",
+                        fontSize = 50.sp,
+                        color = Color.Red,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Cursive,
+                        modifier = Modifier.align(
+                            alignment = Alignment.Center
+                        )
+                    )
                 }
             }
         }
-        Spacer(modifier = Modifier.height(10.dp))
-        Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(300.dp)
-                .background(color = Color.DarkGray),
-            contentAlignment = Alignment.Center
-        ) {
-            Image(
-                painter = image,
-                contentDescription = null,
-                contentScale = ContentScale.Fit
-            )
-            Text(
-                text = "My Favorite Music Gwah",
-                fontSize = 50.sp,
-                color = Color.Red,
-                fontWeight = FontWeight.Bold,
-                fontFamily = FontFamily.Cursive,
-                modifier = Modifier.align(
-                    alignment = Alignment.Center
-                )
-            )
-        }
     }
-
+}
