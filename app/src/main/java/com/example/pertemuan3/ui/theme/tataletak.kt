@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -110,12 +111,14 @@ fun LayoutBoxColumnRow(modifier: Modifier){
     val fotobulet = painterResource(R.drawable.ijulganteng)
     Column {
         Box(
-            modifier = modifier
-                .fillMaxWidth()
-                .height(110.dp)
-                .background(color = Color.Gray),
-            contentAlignment = Alignment.Center
-        ){
+            modifier = Modifier.fillMaxSize()
+        ) {
+            Image(
+                painter = image,
+                contentDescription = "Background",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+        )
             Column() {
                 Row(
                     modifier = modifier.fillMaxWidth(),
