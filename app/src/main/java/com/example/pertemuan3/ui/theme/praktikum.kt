@@ -75,6 +75,13 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                     fontWeight = FontWeight.Bold,
                     color = Color.Blue
                 )
+                Text(
+                    text = "20240140166",
+                    fontSize = 22.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Black
+                )
+
             }
         }
     }
