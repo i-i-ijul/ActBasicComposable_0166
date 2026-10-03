@@ -55,7 +55,7 @@ fun BoxLayout(modifier: Modifier) {
             .fillMaxWidth(),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Box 1")
+        Text(text = "Box1")
         Text(text = "Column1")
         Text(text = "Row1")
         Text(text = "Row2")
