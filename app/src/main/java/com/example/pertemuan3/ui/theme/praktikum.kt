@@ -61,7 +61,14 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                     contentDescription = "Logo Halaman",
                     modifier = Modifier.size(150.dp)
                 )
+                Spacer(modifier = Modifier.height(30.dp))
 
+                Text(
+                    text = "Nama",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Red
+                )
             }
         }
     }
