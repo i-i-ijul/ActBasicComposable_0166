@@ -106,6 +106,8 @@ fun LayoutRowColumn(modifier: Modifier){
 @Composable
 fun LayoutBoxColumnRow(modifier: Modifier){
     val image = painterResource(R.drawable.ijulganteng)
+    val logo = painterResource(R.drawable.logo)
+
     Column {
         Box(
             modifier = modifier
