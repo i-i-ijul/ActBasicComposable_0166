@@ -119,11 +119,12 @@ fun LayoutBoxColumnRow(modifier: Modifier){
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
         )
-            Column() {
-                Row(
-                    modifier = modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
-                ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = 40.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                     Text(text = "ColSatu_Row1_komponen1")
                     Text(text = "colSatu_Row1_komponen2")
                     Text(text = "colSatu_Row1_komponen3")
@@ -163,5 +164,4 @@ fun LayoutBoxColumnRow(modifier: Modifier){
             )
         }
     }
-}
 
