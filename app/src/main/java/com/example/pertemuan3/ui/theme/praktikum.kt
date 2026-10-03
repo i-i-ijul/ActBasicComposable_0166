@@ -54,6 +54,14 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                     fontSize = 14.sp,
                     color = Color.White
                 )
+                Spacer(modifier = Modifier.height(30.dp))
+
+                Image(
+                    painter = logo,
+                    contentDescription = "Logo Halaman",
+                    modifier = Modifier.size(150.dp)
+                )
+
             }
         }
     }
