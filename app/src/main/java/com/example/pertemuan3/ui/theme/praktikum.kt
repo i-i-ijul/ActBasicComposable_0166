@@ -81,7 +81,16 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                     fontWeight = FontWeight.Bold,
                     color = Color.Black
                 )
+                Spacer(modifier = Modifier.height(20.dp))
 
+                Image(
+                    painter = fotobulet,
+                    contentDescription = "Foto Profil",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(250.dp)
+                        .clip(CircleShape)
+                )
             }
         }
     }
