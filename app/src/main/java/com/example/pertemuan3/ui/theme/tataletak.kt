@@ -86,14 +86,14 @@ fun LayoutColumnRow(modifier: Modifier){
 fun LayoutRowColumn(modifier: Modifier){
     Row(modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
         Column() {
-            Text(text = "komponen1kolom1")
-            Text(text = "komponen2kolom1")
-            Text(text = "komponen3kolom1")
+            Text(text = "Komponen1Kolom1")
+            Text(text = "Komponen2Kolom1")
+            Text(text = "Komponen3Kolom1")
         }
         Column() {
-            Text(text = "komponen1kolom2")
-            Text(text = "komponen2kolom2")
-            Text(text = "komponen3kolom2")
+            Text(text = "Komponen1Kolom2")
+            Text(text = "Komponen2Kolom2")
+            Text(text = "Komponen3Kolom2")
         }
     }
 }
