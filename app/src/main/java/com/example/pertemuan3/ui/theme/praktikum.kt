@@ -29,6 +29,13 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
     Column {
         Box(
             modifier = Modifier.fillMaxSize()
-        )
+        ) {
+            Image(
+                painter = background,
+                contentDescription = "Background",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
         }
+    }
 }
