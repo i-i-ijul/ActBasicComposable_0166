@@ -69,6 +69,12 @@ fun LayoutPraktikum(modifier: Modifier = Modifier){
                     fontWeight = FontWeight.Bold,
                     color = Color.Red
                 )
+                Text(
+                    text = "Izzul Maulanal Haqqi",
+                    fontSize = 18.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Blue
+                )
             }
         }
     }
