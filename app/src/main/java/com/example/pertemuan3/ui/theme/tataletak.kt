@@ -1,5 +1,4 @@
 package com.example.pertemuan3.ui.theme
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -8,18 +7,14 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -29,7 +24,6 @@ import androidx.compose.ui.unit.sp
 import com.example.pertemuan3.R
 
 @Composable
-
 fun ColumnLayout(modifier: Modifier) {
     Column(modifier = modifier.padding(
         top = 20.dp,
@@ -43,7 +37,6 @@ fun ColumnLayout(modifier: Modifier) {
 }
 
 @Composable
-
 fun RowLayout(modifier: Modifier){
     Row(modifier = modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceEvenly) {
@@ -55,7 +48,6 @@ fun RowLayout(modifier: Modifier){
 }
 
 @Composable
-
 fun BoxLayout(modifier: Modifier) {
     Box(
         modifier = modifier
@@ -73,7 +65,6 @@ fun BoxLayout(modifier: Modifier) {
 }
 
 @Composable
-
 fun LayoutColumnRow(modifier: Modifier){
     Column() {
         Row(modifier = modifier.fillMaxWidth(),
@@ -108,80 +99,58 @@ fun LayoutRowColumn(modifier: Modifier){
 }
 
 @Composable
-fun LayoutBoxColumnRow(modifier: Modifier) {
-    val image = painterResource(R.drawable.bg)
-    val logo = painterResource(R.drawable.logo)
-    val fotobulet = painterResource(R.drawable.ijulganteng)
+fun LayoutBoxColumnRow(modifier: Modifier){
+    val image = painterResource(R.drawable.ijulganteng)
     Column {
         Box(
-            modifier = Modifier.fillMaxSize()
+            modifier = modifier
+                .fillMaxWidth()
+                .height(110.dp)
+                .background(color = Color.Gray),
+            contentAlignment = Alignment.Center
+        ){
+            Column() {
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "ColSatu_Row1_komponen1")
+                    Text(text = "colSatu_Row1_komponen2")
+                    Text(text = "colSatu_Row1_komponen3")
+                }
+                Row(
+                    modifier = modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+                    Text(text = "ColSatu_Row2_komponen1")
+                    Text(text = "ColSatu_Row2_komponen2")
+                    Text(text = "ColSatu_Row2_komponen3")
+                }
+            }
+        }
+        Spacer(modifier = Modifier.height(10.dp))
+        Box(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(300.dp)
+                .background(color = Color.DarkGray),
+            contentAlignment = Alignment.Center
         ) {
             Image(
                 painter = image,
-                contentDescription = "Background",
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
+                contentDescription = null,
+                contentScale = ContentScale.Fit
             )
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(top = 40.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(
-                    text = "Login",
-                    fontSize = 28.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Blue
+            Text(
+                text = "My Favorite Music Gwah",
+                fontSize = 50.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold,
+                fontFamily = FontFamily.Cursive,
+                modifier = Modifier.align(
+                    alignment = Alignment.Center
                 )
-
-                Text(
-                    text = "Ini adalah halaman login,",
-                    fontSize = 14.sp,
-                    color = Color.White
-                )
-                Spacer(modifier = Modifier.height(30.dp))
-
-                Image(
-                    painter = logo,
-                    contentDescription = "Logo UMY",
-                    modifier = Modifier.size(150.dp)
-                )
-
-                Spacer(modifier = Modifier.height(30.dp))
-
-                Text(
-                    text = "Nama",
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Red
-                )
-
-                Text(
-                    text = "Izzul Maulanal Haqqi",
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Blue
-                )
-
-                Text(
-                    text = "20240140166",
-                    fontSize = 22.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.Black
-                )
-
-                Spacer(modifier = Modifier.height(20.dp))
-
-                Image(
-                    painter = fotobulet,
-                    contentDescription = "Foto Profil",
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .size(250.dp)
-                        .clip(CircleShape)
-                )
-            }
+            )
         }
     }
 }
